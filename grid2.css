@@ -1,0 +1,90 @@
+/*estilos titulos*/
+.title{
+    text-align: center;
+}
+h1{
+    text-align: center;
+    color: white;
+}
+
+h2{
+    color: white;
+}
+h3{
+    color: white;
+}
+p{
+    color: white;
+}
+
+/* Estilos del body*/
+   
+body{
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: lightcoral;
+    overflow: scroll;
+}
+
+
+
+.cabecera, .navbar, .seccion, .seccion2, .articulo, .pie {
+    padding:10px;
+    border: 1px solid;
+    
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 140px 40px repeat(3, auto) 70 ;
+    row-gap:  10px;
+    column-gap: 5px;
+    grid-template-areas: 
+    "navbar navbar navbar"
+    "seccion cabecera cabecera"
+     "seccion articulo articulo"
+     "seccion articulo articulo"
+     "seccion2 seccion2 seccion2"
+     "pie pie pie";
+}
+
+     .cabecera{
+        grid-area: cabecera;
+     }
+
+     .navbar{
+        background-color:black;
+        grid-area: navbar;
+     }
+
+    .navbar ul{
+        display: flex;
+        justify-content: space-evenly;
+        
+    }
+     
+    .seccion{
+        grid-area: seccion;
+
+    }
+    
+    .articulo{
+        grid-area: articulo;
+    }
+
+    .seccion2{
+        grid-area: seccion2;
+        
+
+    }
+
+   /*footer*/
+    
+    .pie{
+        grid-area: pie;
+    
+    }
